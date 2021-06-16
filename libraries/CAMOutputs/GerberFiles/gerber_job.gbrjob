@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2021-06-16T12:34:59Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.6.2"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "Actionneur_Gros_Robot"
+        },
+        "Owner": "Viet Phuong DINH <viet_phuong.dinh@utt.fr>",
+        "Size": {
+            "X": 110,
+            "Y": 55
+        }
+    }
+}

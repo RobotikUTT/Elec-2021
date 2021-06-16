@@ -1,0 +1,13 @@
+# dxfimport generated script file.
+Grid mic 1 off;
+Set Wire_Bend 2;
+CHANGE LAYER 1;
+Change Font Vector;
+# Skipped Section Search
+Wire 1 (171006.56 167389.88) (175269.17 170809.36);
+Wire 1 (175269.17 170809.36) (175269.17 160382.66);
+Wire 1 (181104.82 182989.72) (185367.43 186409.19);
+Wire 1 (185367.43 186409.19) (185367.43 175982.14);
+Window Fit;
+# lines=0, arcs=0, circles=0, polylines=2
+Grid last;
