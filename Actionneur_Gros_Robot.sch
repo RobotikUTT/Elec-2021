@@ -21842,7 +21842,7 @@ W = angled&lt;p&gt;
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="025-025X050" package3d_urn="urn:adsk.eagle:package:23629/2" value="100nF"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="10k"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2"/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
@@ -21909,7 +21909,7 @@ W = angled&lt;p&gt;
 <part name="SV3" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-2" device="" package3d_urn="urn:adsk.eagle:package:8334/1"/>
 <part name="VDD9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="E2.5-7" package3d_urn="urn:adsk.eagle:package:23345/1" value="10uF"/>
+<part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="E2.5-7" package3d_urn="urn:adsk.eagle:package:23345/1" value="47uF"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="025-025X050" package3d_urn="urn:adsk.eagle:package:23629/2" value="100nF"/>
 <part name="VDD10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -22122,9 +22122,9 @@ W = angled&lt;p&gt;
 <instance part="GND11" gate="1" x="40.02" y="90.862" smashed="yes">
 <attribute name="VALUE" x="37.48" y="88.322" size="1.778" layer="96"/>
 </instance>
-<instance part="C2" gate="G$1" x="26.67" y="158.75" smashed="yes">
-<attribute name="NAME" x="27.813" y="159.2326" size="1.778" layer="95"/>
-<attribute name="VALUE" x="27.813" y="154.1526" size="1.778" layer="96"/>
+<instance part="C2" gate="G$1" x="26.67" y="157.734" smashed="yes" rot="R180">
+<attribute name="NAME" x="25.527" y="157.2514" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="25.527" y="162.3314" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="P+4" gate="VCC" x="104.394" y="92.456" smashed="yes">
 <attribute name="VALUE" x="101.854" y="89.916" size="1.778" layer="96" rot="R90"/>
@@ -22231,9 +22231,9 @@ W = angled&lt;p&gt;
 <wire x1="33.11" y1="93.402" x2="40.02" y2="93.402" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C2" gate="G$1" pin="+"/>
 <pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="26.67" y1="161.29" x2="26.67" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="-"/>
+<wire x1="26.67" y1="165.1" x2="26.67" y2="162.814" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -22711,14 +22711,10 @@ W = angled&lt;p&gt;
 </net>
 <net name="VDD" class="0">
 <segment>
-<pinref part="C2" gate="G$1" pin="-"/>
-<wire x1="26.67" y1="153.67" x2="26.67" y2="148.59" width="0.1524" layer="91"/>
 <pinref part="P+5" gate="G$1" pin="VDD"/>
-<wire x1="18.034" y1="148.59" x2="26.67" y2="148.59" width="0.1524" layer="91"/>
 <pinref part="M2" gate="G$1" pin="V+"/>
 <wire x1="48.26" y1="153.67" x2="48.26" y2="148.59" width="0.1524" layer="91"/>
-<wire x1="26.67" y1="148.59" x2="48.26" y2="148.59" width="0.1524" layer="91"/>
-<junction x="26.67" y="148.59"/>
+<wire x1="18.034" y1="148.59" x2="48.26" y2="148.59" width="0.1524" layer="91"/>
 <pinref part="M3" gate="G$1" pin="V+"/>
 <wire x1="64.77" y1="153.67" x2="64.77" y2="148.59" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="148.59" x2="64.77" y2="148.59" width="0.1524" layer="91"/>
@@ -22755,6 +22751,10 @@ W = angled&lt;p&gt;
 <wire x1="196.85" y1="153.67" x2="196.85" y2="148.59" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="148.59" x2="196.85" y2="148.59" width="0.1524" layer="91"/>
 <junction x="180.34" y="148.59"/>
+<pinref part="C2" gate="G$1" pin="+"/>
+<wire x1="26.67" y1="155.194" x2="26.67" y2="148.59" width="0.1524" layer="91"/>
+<wire x1="26.67" y1="148.59" x2="18.034" y2="148.59" width="0.1524" layer="91"/>
+<junction x="18.034" y="148.59"/>
 </segment>
 </net>
 </nets>
