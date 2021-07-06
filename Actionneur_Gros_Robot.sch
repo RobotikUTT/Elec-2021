@@ -21929,6 +21929,8 @@ W = angled&lt;p&gt;
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0207/7" package3d_urn="urn:adsk.eagle:package:23493/2" value="10K"/>
 <part name="P+20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0207/7" package3d_urn="urn:adsk.eagle:package:23493/2" value="15K"/>
+<part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -22944,6 +22946,13 @@ W = angled&lt;p&gt;
 <instance part="P+20" gate="VCC" x="12.446" y="61.722" smashed="yes">
 <attribute name="VALUE" x="9.906" y="59.182" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="R19" gate="G$1" x="96.342" y="54.67" smashed="yes" rot="R180">
+<attribute name="NAME" x="100.152" y="53.1714" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="100.152" y="57.972" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="GND24" gate="1" x="73.268" y="47.258" smashed="yes">
+<attribute name="VALUE" x="70.728" y="44.718" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -23085,6 +23094,12 @@ W = angled&lt;p&gt;
 <pinref part="GND23" gate="1" pin="GND"/>
 <wire x1="15.436" y1="25.7" x2="15.436" y2="22.096" width="0.1524" layer="91"/>
 <wire x1="15.436" y1="22.096" x2="15.324" y2="19.81" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND24" gate="1" pin="GND"/>
+<pinref part="R19" gate="G$1" pin="2"/>
+<wire x1="73.268" y1="49.798" x2="73.268" y2="54.67" width="0.1524" layer="91"/>
+<wire x1="73.268" y1="54.67" x2="91.262" y2="54.67" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VDD" class="0">
@@ -23458,6 +23473,14 @@ W = angled&lt;p&gt;
 <wire x1="19.304" y1="44.704" x2="19.304" y2="42.46" width="0.1524" layer="91"/>
 <wire x1="19.304" y1="42.46" x2="40.42" y2="42.46" width="0.1524" layer="91"/>
 <junction x="40.42" y="42.46"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="U$2" gate="A" pin="RS"/>
+<pinref part="R19" gate="G$1" pin="1"/>
+<wire x1="107.22" y1="46.62" x2="101.422" y2="46.62" width="0.1524" layer="91"/>
+<wire x1="101.422" y1="46.62" x2="101.422" y2="54.67" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
